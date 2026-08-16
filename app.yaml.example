@@ -1,0 +1,15 @@
+# Copy this file to app.yaml and replace the placeholders before deployment.
+runtime: python314
+
+env_variables:
+  AUTH0_CLIENT_ID: "replace-with-auth0-client-id"
+  AUTH0_CLIENT_SECRET: "replace-with-auth0-client-secret"
+  AUTH0_DOMAIN: "replace-with-auth0-domain"
+  GCS_BUCKET: "replace-with-gcs-bucket-name"
+
+automatic_scaling:
+  max_instances: 1
+
+handlers:
+- url: /.*
+  script: auto
